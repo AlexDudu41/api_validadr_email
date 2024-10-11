@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de E-mail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo ao Verificador de E-mails</h1>
+ 
+    <div>
+        <h2>Como Utilizar a API</h2>
+        <ol>
+            <li>
+                <strong>Verificar a validade de um e-mail:</strong>
+                <p>Faça uma requisição GET para o endpoint <code>/verificar/&lt;email&gt;</code>, substituindo <code>&lt;email&gt;</code> pelo e-mail que você deseja verificar.</p>
+                <p>Exemplo: <code>GET /verificar/teste@example.com</code></p>
+                <p>O retorno será um JSON informando se o e-mail é válido e, se não for, sugestões de domínios.</p>
+            </li>
+            <li>
+                <strong>Verificar se um e-mail está ativo:</strong>
+                <p>Faça uma requisição GET para o endpoint <code>/verificar_atividade/&lt;email&gt;</code>, substituindo <code>&lt;email&gt;</code> pelo e-mail que você deseja verificar.</p>
+                <p>Exemplo: <code>GET /verificar_atividade/teste@example.com</code></p>
+                <p>O retorno será um JSON informando se o e-mail parece estar ativo.</p>
+            </li>
+        </ol>
+    </div>
+ 
+    <!-- <div>
+        <h2>Formulário de Verificação</h2>
+        <form action="/verificar" method="post">
+            <input type="text" name="email" placeholder="Digite seu e-mail" required>
+            <button type="submit">Verificar E-mail</button>
+        </form>
+    </div>
+ 
+    <div>
+        <h2>Resultados</h2>
+        <p id="resultado"></p>
+    </div>
+  -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+ 
